@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 mongoose.connect(
-    "mongodb+srv://ezemog1996:gomez1996@egcluster.xzvhm.mongodb.net/googlebooks?retryWrites=true&w=majority",
+    "mongodb+srv://ezemog1996:" + process.env.MONGO_PASSWORD + "@egcluster.xzvhm.mongodb.net/googlebooks?retryWrites=true&w=majority",
     {
         useCreateIndex: true,
         useNewUrlParser: true,
